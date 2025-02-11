@@ -1,4 +1,3 @@
-<script type="text/javascript">
 // viaciclante.com overrides
 // dog
 // target text to add span/class 
@@ -112,4 +111,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-</script>
