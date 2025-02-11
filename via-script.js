@@ -1,3 +1,4 @@
+<script type="text/javascript">
 // viaciclante.com overrides
 // dog
 // target text to add span/class 
@@ -97,17 +98,18 @@ const observer = new MutationObserver(() => {
 observer.observe(document.body, { childList: true, subtree: true });
 
 
+
 // Product description overrides
-const productDescription = document.querySelector("#productDescription");
+document.addEventListener("DOMContentLoaded", () => {
+  const productDescription = document.querySelector("#productDescription");
 
-if (productDescription) {
-  // Select all elements inside the product description
-  const elements = productDescription.querySelectorAll("*");
-
-  elements.forEach((el) => {
-    // Remove class, id, and style attributes
-    el.removeAttribute("class");
-    el.removeAttribute("id");
-    el.removeAttribute("style");
-  });
-}
+  if (productDescription) {
+    const elements = productDescription.querySelectorAll("*");
+    elements.forEach((el) => {
+      el.removeAttribute("class");
+      el.removeAttribute("id");
+      el.removeAttribute("style");
+    });
+  }
+});
+</script>
