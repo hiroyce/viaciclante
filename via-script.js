@@ -99,9 +99,9 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 
 // Product description overrides
-document.addEventListener("DOMContentLoaded", () => {
+const observer = new MutationObserver((mutations) => {
   const productDescription = document.querySelector("#productDescription");
-
+  
   if (productDescription) {
     const elements = productDescription.querySelectorAll("*");
     elements.forEach((el) => {
@@ -109,5 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
       el.removeAttribute("id");
       el.removeAttribute("style");
     });
+    observer.disconnect(); // Stop observing once changes are made
   }
 });
+
+observer.observe(document.body, { childList: true, subtree: true });
