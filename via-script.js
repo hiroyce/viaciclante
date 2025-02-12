@@ -95,19 +95,3 @@ const observer = new MutationObserver(() => {
 
 // Start observing the body for changes in the DOM
 observer.observe(document.body, { childList: true, subtree: true });
-
-
-
-// Product description overrides
-window.onload = () => {
-  const productDescription = document.querySelector("#productDescription");
-
-  if (productDescription) {
-    const elements = productDescription.querySelectorAll("*");
-    elements.forEach((el) => {
-      el.removeAttribute("class");
-      el.removeAttribute("id");
-      el.removeAttribute("style");
-    });
-  }
-};
