@@ -99,18 +99,26 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 
 // Product description overrides
-const observer2 = new MutationObserver((mutations) => {
+const intervalId = setInterval(() => {
   const productDescription = document.querySelector("#productDescription");
-  
+
   if (productDescription) {
     const elements = productDescription.querySelectorAll("*");
-    elements.forEach((el) => {
-      el.removeAttribute("class");
-      el.removeAttribute("id");
-      el.removeAttribute("style");
-    });
-    observer2.disconnect(); // Stop observing once changes are made
-  }
-});
+    let changesMade = false;
 
-observer2.observe(document.body, { childList: true, subtree: true });
+    elements.forEach((el) => {
+      if (el.hasAttribute("class") || el.hasAttribute("id") || el.hasAttribute("style")) {
+        el.removeAttribute("class");
+        el.removeAttribute("id");
+        el.removeAttribute("style");
+        changesMade = true;
+      }
+    });
+
+    // If changes were made, stop the interval after ensuring everything is cleaned
+    if (changesMade) {
+      console.log("Attributes removed, stopping interval.");
+      clearInterval(intervalId);  // Stop checking once changes are made
+    }
+  }
+}, 1000);  // Check every 1 second
