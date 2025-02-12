@@ -99,7 +99,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 
 // Product description overrides
-const observer = new MutationObserver((mutations) => {
+setTimeout(() => {
   const productDescription = document.querySelector("#productDescription");
   
   if (productDescription) {
@@ -109,8 +109,5 @@ const observer = new MutationObserver((mutations) => {
       el.removeAttribute("id");
       el.removeAttribute("style");
     });
-    observer.disconnect(); // Stop observing once changes are made
   }
-});
-
-observer.observe(document.body, { childList: true, subtree: true });
+}, 1000); // Adjust delay if necessary
