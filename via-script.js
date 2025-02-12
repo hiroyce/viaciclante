@@ -1,3 +1,4 @@
+<script type="text/javascript">
 // viaciclante.com overrides
 // dog
 // target text to add span/class 
@@ -99,26 +100,16 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 
 // Product description overrides
-const intervalId = setInterval(() => {
+window.onload = () => {
   const productDescription = document.querySelector("#productDescription");
 
   if (productDescription) {
     const elements = productDescription.querySelectorAll("*");
-    let changesMade = false;
-
     elements.forEach((el) => {
-      if (el.hasAttribute("class") || el.hasAttribute("id") || el.hasAttribute("style")) {
-        el.removeAttribute("class");
-        el.removeAttribute("id");
-        el.removeAttribute("style");
-        changesMade = true;
-      }
+      el.removeAttribute("class");
+      el.removeAttribute("id");
+      el.removeAttribute("style");
     });
-
-    // If changes were made, stop the interval after ensuring everything is cleaned
-    if (changesMade) {
-      console.log("Attributes removed, stopping interval.");
-      clearInterval(intervalId);  // Stop checking once changes are made
-    }
   }
-}, 1000);  // Check every 1 second
+};
+</script>
