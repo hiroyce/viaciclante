@@ -20,8 +20,8 @@ document.querySelectorAll("#tile-category-products-sRPA5C .ins-tile__title").for
 });
 
 document.querySelectorAll("#tile-category-collection-QtcTDn .ins-tile__title").forEach((el) => {
-  if (el.innerHTML.includes("Winter Riding")) {
-    el.innerHTML = el.innerHTML.replace(/Winter Riding/g, '<span class="collection">Winter Riding</span>');
+  if (el.innerHTML.includes("Spring Riding")) {
+    el.innerHTML = el.innerHTML.replace(/Spring Riding/g, '<span class="collection">Spring Riding</span>');
   }
 });
 
