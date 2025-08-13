@@ -1,12 +1,12 @@
 // viaciclante.com overrides 
-// Last updated April 17, 2025
-// dog
+// Last updated Aug 13, 2025 - added Closed Monday note styles
+
 // target text to add span/class 
 document.querySelectorAll("#tile-customer-review-ieFgX8 .ins-tile__title, #tile-customer-review-PF2zG4 .ins-tile__title").forEach((el) => {
   if (el.innerHTML.includes("starting at")) {
     el.innerHTML = el.innerHTML.replace(/starting at/g, '<span class="adjust-text">starting at</span>');
   }
-});	
+}); 
 
 document.querySelectorAll("#tile-customer-review-BpeHf4 .ins-tile__title").forEach((el) => {
   if (el.innerHTML.includes("each service")) {
@@ -23,6 +23,12 @@ document.querySelectorAll("#tile-category-products-sRPA5C .ins-tile__title p").f
 document.querySelectorAll("#tile-category-collection-QtcTDn .ins-tile__title p").forEach((el) => {
   if (el.innerHTML.includes("Spring Riding")) {
     el.innerHTML = el.innerHTML.replace(/Spring Riding/g, '<span class="collection">Spring Riding</span>');
+  }
+});
+
+document.querySelectorAll("#tile-customer-review-5EeQ4X .ins-tile__item .ins-tile__text p").forEach((el) => {
+  if (el.innerHTML.includes("closed Mondays")) {
+    el.innerHTML = el.innerHTML.replace(/closed Mondays/g, '<span class="collection">closed Mondays</span>');
   }
 });
 
