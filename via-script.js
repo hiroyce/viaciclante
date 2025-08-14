@@ -1,5 +1,5 @@
 // viaciclante.com overrides 
-// Last updated Aug 13, 2025 - added Closed Monday note styles
+// Last updated Aug 13, 2025 - added Closed Monday note styles, changed spring to summer
 
 // target text to add span/class 
 document.querySelectorAll("#tile-customer-review-ieFgX8 .ins-tile__title, #tile-customer-review-PF2zG4 .ins-tile__title").forEach((el) => {
@@ -21,8 +21,8 @@ document.querySelectorAll("#tile-category-products-sRPA5C .ins-tile__title p").f
 });
 
 document.querySelectorAll("#tile-category-collection-QtcTDn .ins-tile__title p").forEach((el) => {
-  if (el.innerHTML.includes("Spring Riding")) {
-    el.innerHTML = el.innerHTML.replace(/Spring Riding/g, '<span class="collection">Spring Riding</span>');
+  if (el.innerHTML.includes("Summer Riding")) {
+    el.innerHTML = el.innerHTML.replace(/Summer Riding/g, '<span class="collection">Summer Riding</span>');
   }
 });
 
