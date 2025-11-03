@@ -14,13 +14,13 @@ document.querySelectorAll("#tile-customer-review-BpeHf4 .ins-tile__title").forEa
   }  
 });
 
-document.querySelectorAll("#tile-category-products-sRPA5C .ins-tile__title p").forEach((el) => {
+document.querySelectorAll("#tile-category-products-sRPA5C .ins-tile__title span").forEach((el) => {
   if (el.innerHTML.includes("Sale")) {
     el.innerHTML = el.innerHTML.replace(/Sale/g, '<span class="collection">Sale</span>');
   }
 });
 
-document.querySelectorAll("#tile-category-collection-QtcTDn .ins-tile__title p").forEach((el) => {
+document.querySelectorAll("#tile-category-collection-QtcTDn .ins-tile__title span").forEach((el) => {
   if (el.innerHTML.includes("Cool Weather Riding")) {
     el.innerHTML = el.innerHTML.replace(/Cool Weather Riding/g, '<span class="collection">Cool Weather Riding</span>');
   }
