@@ -21,8 +21,8 @@ document.querySelectorAll("#tile-category-products-sRPA5C .ins-tile__title p").f
 });
 
 document.querySelectorAll("#tile-category-collection-QtcTDn .ins-tile__title p").forEach((el) => {
-  if (el.innerHTML.includes("Summer Riding")) {
-    el.innerHTML = el.innerHTML.replace(/Summer Riding/g, '<span class="collection">Summer Riding</span>');
+  if (el.innerHTML.includes("Cool Weather Riding")) {
+    el.innerHTML = el.innerHTML.replace(/Cool Weather Riding/g, '<span class="collection">Cool Weather Riding</span>');
   }
 });
 
